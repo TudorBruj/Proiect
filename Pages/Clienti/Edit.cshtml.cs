@@ -11,6 +11,7 @@ using Proiect.Models;
 
 namespace Proiect.Pages.Clienti
 {
+
     public class EditModel : PageModel
     {
         private readonly Proiect.Data.ProiectContext _context;

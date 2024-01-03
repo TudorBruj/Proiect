@@ -1,4 +1,7 @@
-﻿namespace Proiect.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace Proiect.Models
 {
     public class Produs
     {
@@ -6,7 +9,8 @@
         public string Nume { get; set; }
 
         public string Descriere { get; set; }
-
+        [Column(TypeName = "decimal(6, 2)")]
+        [Range(0.01, 500)]
         public decimal Pret {  get; set; }
 
         public int Cantitate { get; set; }

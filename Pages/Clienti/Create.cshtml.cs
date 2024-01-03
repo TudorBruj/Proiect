@@ -10,6 +10,7 @@ using Proiect.Models;
 
 namespace Proiect.Pages.Clienti
 {
+
     public class CreateModel : PageModel
     {
         private readonly Proiect.Data.ProiectContext _context;
