@@ -21,7 +21,11 @@ namespace Proiect.Pages.Comenzi
 
         public IActionResult OnGet()
         {
-        ViewData["ClientId"] = new SelectList(_context.Client, "Id", "Id");
+            ViewData["ClientId"] = new SelectList(_context.Client.Select(c => new
+            {
+                Id = c.Id,
+                NumeComplet = c.Nume + " " + c.Prenume
+            }), "Id", "NumeComplet");
             return Page();
         }
 

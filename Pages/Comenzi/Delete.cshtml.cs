@@ -29,7 +29,7 @@ namespace Proiect.Pages.Comenzi
                 return NotFound();
             }
 
-            var comanda = await _context.Comanda.FirstOrDefaultAsync(m => m.Id == id);
+            var comanda = await _context.Comanda.Include(i => i.Client).FirstOrDefaultAsync(m => m.Id == id);
 
             if (comanda == null)
             {

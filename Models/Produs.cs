@@ -10,7 +10,7 @@ namespace Proiect.Models
 
         public string Descriere { get; set; }
         [Column(TypeName = "decimal(6, 2)")]
-        [Range(0.01, 500)]
+        [Range(0.01, 10000)]
         public decimal Pret {  get; set; }
 
         public int Cantitate { get; set; }
